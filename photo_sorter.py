@@ -46,10 +46,8 @@ def photo_read_and_change(photo_name):
 
 def main():
     global new_folder
-    #original_folder = Path(input("Please add file path to the folder with photos (refer to README for more info)\n")) #add your folder with unsorted photos
-    #new_folder = Path(input("Please add file path to the folder you want the photos in (refer to README for more info)\n"))#folder where the photos will be sorted (must be outside of original_folder!!!)
-    original_folder=Path("/Users/klaudia.lalova/Desktop/test-photos")
-    new_folder=Path("/Users/klaudia.lalova/Desktop/new")
+    original_folder = Path(input("Please add file path to the folder with photos (refer to README for more info)\n")) #add your folder with unsorted photos
+    new_folder = Path(input("Please add file path to the folder you want the photos in (refer to README for more info)\n"))#folder where the photos will be sorted (must be outside of original_folder!!!)
     read_folders(original_folder)
 
 if __name__ == "__main__":
