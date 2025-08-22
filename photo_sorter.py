@@ -18,22 +18,6 @@ def read_folders(folder):
                 photo_read_and_change(file_name) #takes photo to be manipulated
             elif file_name.is_dir(): #finds if file is a directory
                 read_folders(file_name) #moves to directory to search it for photos'''
-#original photo read change name
-'''def photo_read_and_change(photo_name):
-    stat = os.stat(photo_name) #reads photo data
-    modified_time = (str(datetime.fromtimestamp(stat.st_mtime))).replace("-"," ").split() #finds date+time photo was modified and splits it into list
-    create_nestedDir(modified_time[0],modified_time[1],modified_time[2]) #creates nested folder YYYY/MM/DD
-    file_type ="." + photo_name.rsplit('.', 1)[-1]
-    destination=new_folder+"/"+modified_time[0]+"/"+modified_time[1]+"/"+modified_time[2]+"/"+modified_time[3]+"(0)"
-    i=0
-    while True: #handles photos with same date/time by adding a number
-        try:
-            os.rename(photo_name,str(destination+file_type))
-            break
-        except:
-            destination=destination[:-2]+i+")"
-            i+=1'''
-#new one
 
 def photo_read_and_change(photo_name):
     with open(photo_name,"rb") as f:
